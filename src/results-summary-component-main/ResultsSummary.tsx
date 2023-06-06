@@ -1,16 +1,37 @@
 import styled from "styled-components";
 import Layouth from "../components/layouth/Layouth";
+import Skills from "./components/Skills";
 
 export default function ResultsSummary() {
   return (
     <ResultsSummaryCss>
       <Layouth>
-        <h2>Hola Mundo</h2>
-        <p>
-          Your Result 76 of 100 Great You scored higher than 65% of the people
-          who have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100
-          Verbal 61 / 100 Visual 72 / 100 Continue
-        </p>
+        <section>
+          <div>
+            <h3>Your Result</h3>
+            <div>
+              <p>
+                76 <span>of 100</span>
+              </p>
+              <p>Great</p>
+              <span>
+                You scored higher than 65% of the people who have taken these
+                tests.
+              </span>
+            </div>
+          </div>
+          <div>
+            <strong>Summary</strong>
+            <div>
+              <Skills text="Reaction" puntos={80} img="src/results-summary-component-main/assets/images/icon-reaction.svg"
+              />
+              <Skills text="Memory" puntos={92} img="src/results-summary-component-main/assets/images/icon-memory.svg"/>
+              <Skills text="Verbal" puntos={61} img="src/results-summary-component-main/assets/images/icon-verbal.svg"/>
+              <Skills text="Visual" puntos={72} img="src/results-summary-component-main/assets/images/icon-visual.svg"/>
+            </div>
+            <button>Continue</button>
+          </div>
+        </section>
         <div className="attribution">
           Challenge by{" "}
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
